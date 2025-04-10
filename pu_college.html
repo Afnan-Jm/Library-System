@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PU College Library Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PU College Library Management System</h1>
+
+        <!-- Form to add new library record -->
+        <div class="form-container">
+            <h2>Add New Record</h2>
+            <input type="text" id="bookName" placeholder="Book Name" required>
+            <input type="text" id="studentName" placeholder="Student Name" required>
+            <input type="text" id="class" placeholder="Class" required>
+            <input type="text" id="rollNumber" placeholder="Roll Number" required>
+            <input type="date" id="issueDate" required>
+            <button onclick="addRecord()">Add Record</button>
+        </div>
+
+        <!-- Display existing records -->
+        <div class="records-container">
+            <h2>Library Records</h2>
+            <table id="recordsTable">
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Student Name</th>
+                        <th>Class</th>
+                        <th>Roll Number</th>
+                        <th>Issue Date</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody id="recordsBody">
+                    <!-- Records will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
